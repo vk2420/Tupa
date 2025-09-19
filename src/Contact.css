@@ -1,0 +1,48 @@
+/* Contact page specific styles */
+
+.Contact-section {
+  max-width: 700px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(33,147,176,0.10);
+  padding: 2.5rem 3rem;
+}
+
+.Contact-section h2 {
+  color: #2193b0;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.Contact-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(120deg, #e3f0ff 0%, #f8fafc 100%);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(33,147,176,0.08);
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.Contact-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2193b0;
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .Contact-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  .Contact-img {
+    width: 70px;
+    height: 70px;
+  }
+} 

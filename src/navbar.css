@@ -1,0 +1,143 @@
+/* Navbar Styles */
+
+.Portfolio-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Portfolio-nav-home {
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.Portfolio-nav-home .Portfolio-orgname {
+  pointer-events: auto;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 2rem;
+}
+
+.Portfolio-nav-home ul {
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.Portfolio-nav-home li {
+  color: #fff;
+}
+
+.Portfolio-nav-home li.active,
+.Portfolio-nav-home li:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.Portfolio-orgname {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2193b0;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  position: absolute;
+  left: 2rem;
+}
+
+.Portfolio-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+  box-shadow: 0 2px 12px rgba(33, 147, 176, 0.08);
+}
+
+.Portfolio-nav li {
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.7rem 1.7rem;
+  border-radius: 30px;
+  transition: background 0.2s, color 0.2s;
+  color: #2193b0;
+  font-weight: 600;
+}
+
+.Portfolio-nav li.active,
+.Portfolio-nav li:hover {
+  background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+  color: #fff;
+}
+
+.Portfolio-nav-center {
+  justify-content: center !important;
+  gap: 2.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Portfolio-nav {
+    padding: 0.8rem 1rem;
+  }
+  
+  .Portfolio-nav ul {
+    gap: 1.5rem;
+  }
+  
+  .Portfolio-nav li {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+  
+  .Portfolio-orgname {
+    font-size: 1.1rem;
+    left: 1rem;
+  }
+  
+  .Portfolio-nav-home .Portfolio-orgname {
+    left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Portfolio-nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .Portfolio-nav ul {
+    gap: 1rem;
+  }
+  
+  .Portfolio-nav li {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+  
+  .Portfolio-orgname {
+    position: static;
+    margin-bottom: 0.5rem;
+  }
+  
+  .Portfolio-nav-home .Portfolio-orgname {
+    position: static;
+    margin-bottom: 0.5rem;
+  }
+}

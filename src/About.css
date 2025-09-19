@@ -1,0 +1,370 @@
+/* About page specific styles */
+
+.About-section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(33,147,176,0.10);
+  padding: 0;
+  overflow: hidden;
+}
+
+.About-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.About-image {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.About-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.About-image:hover img {
+  transform: scale(1.05);
+}
+
+.About-content {
+  padding: 3rem 3rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.About-content h2 {
+  color: #2193b0;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.About-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.About-content p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.About-content strong {
+  color: #2193b0;
+  font-weight: 700;
+}
+
+.About-content em {
+  font-style: italic;
+  color: #666;
+}
+
+.About-closing {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(33, 147, 176, 0.2);
+  background: linear-gradient(135deg, rgba(33, 147, 176, 0.05) 0%, rgba(109, 213, 237, 0.05) 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.About-closing p {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.About-signature {
+  margin-top: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.About-signature p {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.About-signature p:last-child {
+  font-size: 1.3rem;
+  color: #2193b0;
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+.About-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(33, 147, 176, 0.1);
+}
+
+.About-learn-more-btn {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(33, 147, 176, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.About-learn-more-btn:hover {
+  background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(33, 147, 176, 0.4);
+}
+
+/* Meet Ashra Section */
+.Meet-ashra-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(33,147,176,0.10);
+  padding: 3rem;
+}
+
+.Meet-ashra-container {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.Meet-ashra-image {
+  flex: 0 0 350px;
+  position: relative;
+}
+
+.Meet-ashra-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.Meet-ashra-image img:hover {
+  transform: scale(1.02);
+}
+
+.Meet-ashra-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 450px;
+}
+
+.Meet-ashra-content h3 {
+  color: #2193b0;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.Meet-ashra-text {
+  flex: 1;
+}
+
+.Meet-ashra-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.Meet-ashra-content strong {
+  color: #2193b0;
+  font-weight: 700;
+}
+
+.Meet-ashra-content em {
+  font-style: italic;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .About-section {
+    margin: 2rem auto;
+  }
+  
+  .About-image {
+    height: 350px;
+  }
+  
+  .About-content {
+    padding: 2.5rem 2rem 2rem 2rem;
+  }
+  
+  .About-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .About-section {
+    margin: 1.5rem auto;
+    border-radius: 12px;
+  }
+  
+  .About-content {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .About-image {
+    height: 300px;
+  }
+  
+  .About-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .About-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .About-closing {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 1.5rem;
+  }
+  
+  .About-button-container {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .About-section {
+    margin: 1rem auto;
+    border-radius: 8px;
+  }
+  
+  .About-content {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  
+  .About-image {
+    height: 250px;
+  }
+  
+  .About-content h2 {
+    font-size: 2rem;
+  }
+  
+  .About-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  .About-closing {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    padding: 1rem;
+  }
+  
+  .About-learn-more-btn {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+  }
+} 
+
+/* Responsive Design for Meet Ashra */
+@media (max-width: 1024px) {
+  .Meet-ashra-section {
+    margin: 3rem auto;
+    padding: 2.5rem;
+  }
+  
+  .Meet-ashra-container {
+    gap: 2rem;
+  }
+  
+  .Meet-ashra-image {
+    flex: 0 0 300px;
+  }
+  
+  .Meet-ashra-image img {
+    height: 400px;
+  }
+  
+  .Meet-ashra-content {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Meet-ashra-section {
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+  }
+  
+  .Meet-ashra-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .Meet-ashra-image {
+    flex: none;
+    width: 100%;
+  }
+  
+  .Meet-ashra-image img {
+    height: 300px;
+  }
+  
+  .Meet-ashra-content {
+    min-height: auto;
+  }
+  
+  .Meet-ashra-content h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Meet-ashra-section {
+    margin: 1.5rem auto;
+    padding: 1.5rem 1rem;
+  }
+  
+  .Meet-ashra-image img {
+    height: 250px;
+  }
+  
+  .Meet-ashra-content h3 {
+    font-size: 1.8rem;
+  }
+  
+  .Meet-ashra-content p {
+    font-size: 1rem;
+  }
+} 
