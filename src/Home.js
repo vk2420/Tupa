@@ -66,7 +66,7 @@ function Home() {
       <section className="Home-meet-ashra-simple">
         <div className="Home-meet-ashra-container">
           <div className="Home-meet-ashra-image">
-            <img src={home} alt="Ashra" />
+            <img src="/Ashra.jpg" alt="Ashra" />
           </div>
           <div className="Home-meet-ashra-content">
             <h3>Meet Ashra</h3>

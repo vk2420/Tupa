@@ -63,7 +63,7 @@ function About() {
       <div className="Meet-ashra-section">
         <div className="Meet-ashra-container">
           <div className="Meet-ashra-image">
-            <img src={home} alt="Ashra" />
+            <img src="/Ashra.jpg" alt="Ashra" />
           </div>
           <div className="Meet-ashra-content">
             <h3>Meet Ashra</h3>
