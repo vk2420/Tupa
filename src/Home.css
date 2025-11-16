@@ -17,7 +17,7 @@
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
@@ -95,9 +95,11 @@
   width: 100%;
   height: 500px;
   object-fit: cover;
+  object-position: center;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .Home-about-image img:hover {
@@ -197,9 +199,11 @@
   width: 100%;
   height: 450px;
   object-fit: cover;
+  object-position: center;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .Home-meet-ashra-image img:hover {
@@ -368,6 +372,8 @@
   
   .Home-about-image img {
     height: 300px;
+    object-fit: cover;
+    object-position: center;
   }
   
   .Home-about-content {
@@ -399,6 +405,8 @@
   
   .Home-meet-ashra-image img {
     height: 300px;
+    object-fit: cover;
+    object-position: center;
   }
   
   .Home-meet-ashra-content {
@@ -428,6 +436,8 @@
 @media (max-width: 480px) {
   .Home-about-image img {
     height: 250px;
+    object-fit: cover;
+    object-position: center;
   }
   
   .Home-about-content h2 {
@@ -445,6 +455,8 @@
   
   .Home-meet-ashra-image img {
     height: 250px;
+    object-fit: cover;
+    object-position: center;
   }
   
   .Home-meet-ashra-content h3 {
