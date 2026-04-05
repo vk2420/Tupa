@@ -1,39 +1,83 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Work.css';
 
-const workItems = [
+const papers = [
   {
-    title: 'Community Outreach',
-    description: 'Education and healthcare initiatives in underserved areas.',
-    image: 'https://images.unsplash.com/photo-1468421870903-4df1664ac249?auto=format&fit=crop&w=400&q=80',
+    id: 1,
+    title: 'Comparative Analysis on Global Health',
+    description:
+      'This paper presents a comparative analysis of global health systems, examining disparities in healthcare access, policy outcomes, and the social determinants of health across different regions and income groups. It explores how structural inequalities shape health outcomes and proposes evidence-based frameworks for equitable healthcare delivery worldwide.',
+    file: '/Comparative analysis on Global health.pdf',
+    tag: 'Global Health',
   },
   {
-    title: 'Environmental Campaigns',
-    description: 'Organizing clean-up drives and awareness events.',
-    image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80',
-  },
-  {
-    title: 'Gender Equality Workshops',
-    description: 'Empowering women and promoting inclusion.',
-    image: 'https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80',
-  },
-  {
-    title: 'Policy Advocacy',
-    description: 'Collaborating with local governments for policy change.',
-    image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
+    id: 2,
+    title: 'Comparative Sociological Analysis',
+    description:
+      'This work conducts a comparative sociological study of social structures, norms, and institutions across diverse societies. Drawing on qualitative and quantitative methodologies, it investigates how cultural, economic, and political forces intersect to produce social stratification, collective identity, and mechanisms of social change.',
+    file: '/Comparative sociological analysis.pdf',
+    tag: 'Sociology',
   },
 ];
 
 function Work() {
+  const [expanded, setExpanded] = useState({});
+
+  const toggle = (id) =>
+    setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
+
   return (
     <section className="Work-section">
-      <h2>My Work</h2>
-      <div className="Work-cards">
-        {workItems.map((item, idx) => (
-          <div className="Work-card" key={idx}>
-            <img src={item.image} alt={item.title} className="Work-card-img" />
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
+      <div className="Work-header">
+        <h2>My Work</h2>
+        <p className="Work-subtitle">
+          Academic papers and research publications
+        </p>
+      </div>
+
+      <div className="Work-papers">
+        {papers.map((paper) => (
+          <div className="Work-paper-card" key={paper.id}>
+            <div className="Work-paper-top">
+              <span className="Work-tag">{paper.tag}</span>
+              <h3 className="Work-paper-title">{paper.title}</h3>
+              <p className="Work-paper-desc">{paper.description}</p>
+            </div>
+
+            {/* Inline PDF preview (toggled) */}
+            {expanded[paper.id] && (
+              <div className="Work-pdf-preview">
+                <iframe
+                  src={`${paper.file}#page=1&view=FitH`}
+                  title={paper.title}
+                  className="Work-pdf-frame"
+                />
+              </div>
+            )}
+
+            <div className="Work-paper-actions">
+              <button
+                className="Work-btn Work-btn-preview"
+                onClick={() => toggle(paper.id)}
+              >
+                {expanded[paper.id] ? 'Close Preview' : 'Preview Paper'}
+              </button>
+              <a
+                href={paper.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="Work-btn Work-btn-read"
+              >
+                Read Full Paper ↗
+              </a>
+              <a
+                href={paper.file}
+                download
+                className="Work-btn Work-btn-download"
+              >
+                Download PDF
+              </a>
+            </div>
           </div>
         ))}
       </div>
@@ -41,4 +85,4 @@ function Work() {
   );
 }
 
-export default Work; 
+export default Work;

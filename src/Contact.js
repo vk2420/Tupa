@@ -10,7 +10,6 @@ function Contact() {
         <div>
           <p>Email: <a href="mailto: ashrakabir@gmail.com">ashrakabir@gmail.com</a></p>
           <p>Facebook: <a href="https://www.facebook.com/share/1D9S8B128k/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Liria BD on Facebook</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/ashra-kabir-b047aa327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">linkedin.com/in/aarav-activist</a></p>
         </div>
       </div>
     </section>
